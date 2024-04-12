@@ -1,4 +1,8 @@
 function mergeSort(arr) {
+  if (!Array.isArray(arr) || arr.length === 0) {
+    return 'ERROR';
+  }
+
   if (arr.length === 1) {
     return arr;
   }
@@ -23,6 +27,8 @@ function mergeSort(arr) {
   }
 }
 
+console.log(mergeSort(1));
+console.log(mergeSort([]));
 console.log(mergeSort([3, 2, 1, 13, 8, 5, 0, 1]));
 console.log(mergeSort([105, 79, 100, 110]));
 console.log(mergeSort([3, 2, 1]));
